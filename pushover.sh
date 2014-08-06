@@ -58,7 +58,7 @@ push_message () {
     curl -ks \
         -F "token=${PUSHOVER_API_TOKEN}" \
         -F "user=${PUSHOVER_USER_TOKEN}" \
-        -F "message=${PUSHOVER_MESSAGE_TEXT}" \
+        -F "message=`echo -e ${PUSHOVER_MESSAGE_TEXT}`" \
         -F "device=${PUSHOVER_TARGET_DEVICE}" \
         -F "title=${PUSHOVER_MESSAGE_TITLE}" \
         -F "url=${PUSHOVER_MESSAGE_URL}" \
